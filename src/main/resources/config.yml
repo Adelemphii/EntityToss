@@ -1,0 +1,13 @@
+# The two placeholders are %player% and %target%, landing-slam-message does not have a %target%. Same with the reload messages.
+# Player is the one throwing and Target is the one being thrown.
+player-tossing-message: '&c[EntityToss]: &aYou are now tossing %target%'
+target-tossing-message: '&c[EntityToss]: &aYou are now being tossed by %player%'
+
+player-tossed-message: '&c[EntityToss]: &aYou have tossed %target%'
+target-tossed-message: '&c[EntityToss]: &aYou have been tossed by %player%'
+
+landing-slam-message: '&c[EntityToss]: &c%player% has been tossed into the fray!'
+mob-landing-event: true
+
+reload-permission-message: '&c[EntityToss]: You do not have permission to do that!'
+reload-message: '&c[EntityToss]: &aConfig Reloaded!'

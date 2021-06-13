@@ -1,0 +1,11 @@
+name: EntityToss
+version: ${project.version}
+main: me.adelemphii.entitytoss.EntityToss
+website: adelemphii.me
+author: Adelemphii
+api-version: 1.13
+
+commands:
+  tossreload:
+    description: Reloads the config!
+    aliases: treload
