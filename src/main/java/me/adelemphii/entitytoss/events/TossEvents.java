@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.World;
+import org.bukkit.entity.Creeper;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -184,6 +185,7 @@ public class TossEvents implements Listener {
 
             if (event.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK) {
                 if (plugin.getPlayerToss().containsKey(player.getUniqueId())) {
+
                     if (plugin.getPlayerToss().get(player.getUniqueId())) {
                         event.setCancelled(true);
                     }
@@ -205,6 +207,13 @@ public class TossEvents implements Listener {
 
                     Location landing = entity.getLocation();
                     World world = landing.getWorld();
+
+                    if(plugin.getConfig().getBoolean("creeper-explode-on-land")) {
+                        if (entity instanceof Creeper) {
+                            Creeper creeper = (Creeper) entity;
+                            creeper.explode();
+                        }
+                    }
 
                     assert world != null;
                     world.playSound(landing, Sound.BLOCK_ANVIL_LAND, 1f, .5f);

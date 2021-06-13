@@ -8,6 +8,7 @@ target-tossed-message: '&c[EntityToss]: &aYou have been tossed by %player%'
 
 landing-slam-message: '&c[EntityToss]: &c%player% has been tossed into the fray!'
 mob-landing-event: true
+creeper-explode-on-land: true
 
 reload-permission-message: '&c[EntityToss]: You do not have permission to do that!'
 reload-message: '&c[EntityToss]: &aConfig Reloaded!'
